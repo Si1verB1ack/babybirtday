@@ -189,7 +189,7 @@ body {
 /* Candles */
 .candles-container {
     position: absolute;
-    top: 28%;
+    top: 25.5%;
     left: 50%;
     transform: translateX(-50%);
     width: clamp(160px, 24vw, 200px);
@@ -214,6 +214,7 @@ body {
     transition: transform 0.2s ease;
     flex-shrink: 0;
     flex: 0 0 auto;
+    margin-bottom: -2px;
 }
 
 .candle::after {
@@ -223,14 +224,14 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: clamp(2px, 0.3vw, 3px);
-    height: clamp(3px, 0.5vh, 5px);
+    height: clamp(2px, 0.4vh, 4px);
     background: #E0E0E0;
     border-radius: 1px;
 }
 
 .candle .wick-glow {
     position: absolute;
-    bottom: calc(100% + 2px);
+    bottom: calc(100% + 1px);
     left: 50%;
     transform: translateX(-50%);
     width: clamp(4px, 0.6vw, 6px);
@@ -254,7 +255,7 @@ body {
 
 .flame {
     position: absolute;
-    bottom: calc(100% + 3px);
+    bottom: calc(100% + 2px);
     left: 50%;
     transform: translateX(-50%);
     width: clamp(14px, 2.2vw, 20px);
@@ -475,7 +476,7 @@ body {
     .candles-container {
         width: clamp(160px, 24vw, 200px);
         max-width: 200px;
-        top: 28%;
+        top: 25.5%;
         gap: clamp(8px, 1vw, 12px);
     }
 }
@@ -499,7 +500,7 @@ body {
     .candles-container {
         width: clamp(140px, 22vw, 170px);
         max-width: 170px;
-        top: 27%;
+        top: 25%;
         gap: clamp(6px, 0.8vw, 8px);
     }
     
@@ -537,7 +538,7 @@ body {
     .candles-container {
         width: clamp(120px, 20vw, 150px);
         max-width: 150px;
-        top: 27%;
+        top: 24.5%;
         gap: clamp(4px, 0.6vw, 6px);
     }
     
@@ -571,7 +572,7 @@ body {
     .candles-container {
         width: clamp(110px, 18vw, 140px);
         max-width: 140px;
-        top: 26%;
+        top: 24%;
         gap: clamp(3px, 0.5vw, 5px);
     }
     
