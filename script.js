@@ -466,9 +466,10 @@ window.addEventListener('load', () => {
     createSnowBackground();
     
     // Set default name to "bb"
-    if (cakeName) {
-        cakeName.textContent = 'Happy Birthday bb!';
-    }
+    // Name is set in HTML - don't override it
+    // if (cakeName) {
+    //     cakeName.textContent = 'Happy Birthday bb!';
+    // }
     
     // Show microphone button if on HTTPS or localhost
     if (micButton) {
