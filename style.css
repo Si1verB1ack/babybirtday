@@ -187,7 +187,7 @@ body {
 /* Candles */
 .candles-container {
     position: absolute;
-    top: calc(50vh - 30px);
+    top: calc(50vh - 142.5px);
     left: 50%;
     transform: translateX(-50%);
     width: 200px;
