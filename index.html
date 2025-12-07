@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blow Out the Candles!</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&family=Baloo+2:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Snow falling background -->
+    <div class="snow-background" id="snowBackground"></div>
+
+    <div class="cake-container">
+      <svg
+        class="cake-svg"
+        viewBox="0 0 400 350"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <!-- Cute pastel cake gradients -->
+          <linearGradient id="cakeBase" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color: #ffffff; stop-opacity: 1" />
+            <stop offset="50%" style="stop-color: #fff9f5; stop-opacity: 1" />
+            <stop offset="100%" style="stop-color: #fff5f0; stop-opacity: 1" />
+          </linearGradient>
+
+          <linearGradient id="frostingPink" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color: #ff8cc8; stop-opacity: 1" />
+            <stop offset="50%" style="stop-color: #ff79a8; stop-opacity: 1" />
+            <stop offset="100%" style="stop-color: #ff5a8f; stop-opacity: 1" />
+          </linearGradient>
+
+          <linearGradient id="frostingCream" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color: #ffffff; stop-opacity: 1" />
+            <stop offset="100%" style="stop-color: #fff8f5; stop-opacity: 1" />
+          </linearGradient>
+
+          <!-- Soft warm glow shadow -->
+          <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="8" />
+            <feOffset dx="0" dy="8" result="offsetblur" />
+            <feComponentTransfer>
+              <feFuncA type="linear" slope="0.2" />
+            </feComponentTransfer>
+            <feMerge>
+              <feMergeNode />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+
+          <!-- 3D depth shadow -->
+          <filter
+            id="depthShadow"
+            x="-100%"
+            y="-100%"
+            width="300%"
+            height="300%"
+          >
+            <feGaussianBlur in="SourceAlpha" stdDeviation="6" />
+            <feOffset dx="2" dy="10" result="offsetblur" />
+            <feComponentTransfer>
+              <feFuncA type="linear" slope="0.25" />
+            </feComponentTransfer>
+            <feMerge>
+              <feMergeNode />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+
+        <!-- Soft blurred shadow under cake -->
+        <ellipse
+          cx="200"
+          cy="340"
+          rx="160"
+          ry="12"
+          fill="#FFDDE8"
+          opacity="0.3"
+          filter="url(#softGlow)"
+        />
+
+        <!-- Bottom tier -->
+        <rect
+          x="55"
+          y="255"
+          width="290"
+          height="75"
+          rx="26"
+          fill="url(#cakeBase)"
+          filter="url(#depthShadow)"
+        />
+        <!-- Bottom tier side highlight -->
+        <rect
+          x="55"
+          y="255"
+          width="15"
+          height="75"
+          rx="26"
+          fill="rgba(255, 255, 255, 0.6)"
+          opacity="0.5"
+        />
+
+        <!-- Bottom tier frosting -->
+        <ellipse
+          cx="200"
+          cy="255"
+          rx="145"
+          ry="24"
+          fill="url(#frostingPink)"
+          filter="url(#softGlow)"
+        />
+        <ellipse cx="200" cy="253" rx="145" ry="22" fill="#FFE7ED" />
+        <path
+          d="M 65 253 Q 120 250, 175 252 Q 200 253, 225 252 Q 280 250, 335 253"
+          fill="none"
+          stroke="#FFFFFF"
+          stroke-width="2.5"
+          opacity="0.7"
+          stroke-linecap="round"
+        />
+        <!-- Cute piping details on bottom tier - more decorative -->
+        <circle cx="110" cy="260" r="3.5" fill="#FFB6C9" opacity="0.8" />
+        <circle cx="140" cy="258" r="2.5" fill="#FFA28A" opacity="0.7" />
+        <circle cx="200" cy="260" r="4" fill="#FFB6C9" opacity="0.8" />
+        <circle cx="260" cy="258" r="2.5" fill="#FFA28A" opacity="0.7" />
+        <circle cx="290" cy="260" r="3.5" fill="#FFB6C9" opacity="0.8" />
+
+        <!-- Middle tier -->
+        <rect
+          x="85"
+          y="185"
+          width="230"
+          height="65"
+          rx="22"
+          fill="url(#cakeBase)"
+          filter="url(#depthShadow)"
+        />
+        <!-- Middle tier side highlight -->
+        <rect
+          x="85"
+          y="185"
+          width="12"
+          height="65"
+          rx="22"
+          fill="rgba(255, 255, 255, 0.6)"
+          opacity="0.5"
+        />
+
+        <!-- Middle tier frosting -->
+        <ellipse
+          cx="200"
+          cy="185"
+          rx="115"
+          ry="20"
+          fill="url(#frostingPink)"
+          filter="url(#softGlow)"
+        />
+        <ellipse cx="200" cy="183" rx="115" ry="18" fill="#FFE7ED" />
+        <path
+          d="M 95 183 Q 140 180, 185 182 Q 200 183, 215 182 Q 260 180, 305 183"
+          fill="none"
+          stroke="#FFFFFF"
+          stroke-width="2"
+          opacity="0.7"
+          stroke-linecap="round"
+        />
+        <!-- Cute dots pattern on middle tier - enhanced -->
+        <circle cx="125" cy="195" r="3" fill="#FFB6C9" opacity="0.7" />
+        <circle cx="150" cy="193" r="2.5" fill="#FFA28A" opacity="0.7" />
+        <circle cx="175" cy="195" r="3" fill="#FFB6C9" opacity="0.7" />
+        <circle cx="200" cy="193" r="2.5" fill="#FFA28A" opacity="0.7" />
+        <circle cx="225" cy="195" r="3" fill="#FFB6C9" opacity="0.7" />
+        <circle cx="250" cy="193" r="2.5" fill="#FFA28A" opacity="0.7" />
+        <circle cx="275" cy="195" r="3" fill="#FFB6C9" opacity="0.7" />
+
+        <!-- Top tier -->
+        <rect
+          x="115"
+          y="125"
+          width="170"
+          height="58"
+          rx="20"
+          fill="url(#cakeBase)"
+          filter="url(#depthShadow)"
+        />
+        <!-- Top tier side highlight -->
+        <rect
+          x="115"
+          y="125"
+          width="10"
+          height="58"
+          rx="20"
+          fill="rgba(255, 255, 255, 0.6)"
+          opacity="0.5"
+        />
+
+        <!-- Top tier frosting -->
+        <ellipse
+          cx="200"
+          cy="125"
+          rx="85"
+          ry="16"
+          fill="url(#frostingPink)"
+          filter="url(#softGlow)"
+        />
+        <ellipse cx="200" cy="123" rx="85" ry="14" fill="#FFE7ED" />
+        <path
+          d="M 125 123 Q 160 121, 195 122 Q 200 123, 205 122 Q 240 121, 275 123"
+          fill="none"
+          stroke="#FFFFFF"
+          stroke-width="1.5"
+          opacity="0.6"
+          stroke-linecap="round"
+        />
+        <!-- Cute small hearts on top tier frosting - enhanced -->
+        <path
+          d="M 140 118 Q 140 114, 145 114 Q 150 114, 150 118 Q 150 122, 145 126 Q 140 122, 140 118"
+          fill="#FFB6C9"
+          opacity="0.8"
+        />
+        <path
+          d="M 200 118 Q 200 114, 205 114 Q 210 114, 210 118 Q 210 122, 205 126 Q 200 122, 200 118"
+          fill="#FFA28A"
+          opacity="0.8"
+        />
+        <path
+          d="M 260 118 Q 260 114, 265 114 Q 270 114, 270 118 Q 270 122, 265 126 Q 260 122, 260 118"
+          fill="#FFB6C9"
+          opacity="0.8"
+        />
+
+        <!-- Decorative sprinkles on top tier - more colorful and varied -->
+        <g class="sprinkles">
+          <circle cx="130" cy="110" r="2.5" fill="#FF79A8" opacity="0.9" />
+          <circle cx="145" cy="108" r="2" fill="#FFA28A" opacity="0.9" />
+          <circle cx="160" cy="110" r="2.5" fill="#FFB6C9" opacity="0.9" />
+          <circle cx="175" cy="108" r="2" fill="#FF79A8" opacity="0.9" />
+          <circle cx="190" cy="110" r="2.5" fill="#FFA28A" opacity="0.9" />
+          <circle cx="205" cy="108" r="2" fill="#FFB6C9" opacity="0.9" />
+          <circle cx="220" cy="110" r="2.5" fill="#FF79A8" opacity="0.9" />
+          <circle cx="235" cy="108" r="2" fill="#FFA28A" opacity="0.9" />
+          <circle cx="250" cy="110" r="2.5" fill="#FFB6C9" opacity="0.9" />
+          <circle cx="265" cy="108" r="2" fill="#FF79A8" opacity="0.9" />
+        </g>
+
+        <!-- Decorative hearts on middle tier - larger and cuter -->
+        <g class="heart-decorations">
+          <path
+            d="M 120 175 Q 120 168, 127 168 Q 132 168, 132 175 Q 132 182, 127 188 Q 120 182, 120 175"
+            fill="#FF79A8"
+            opacity="0.8"
+          />
+          <path
+            d="M 200 175 Q 200 168, 207 168 Q 212 168, 212 175 Q 212 182, 207 188 Q 200 182, 200 175"
+            fill="#FFA28A"
+            opacity="0.8"
+          />
+          <path
+            d="M 280 175 Q 280 168, 287 168 Q 292 168, 292 175 Q 292 182, 287 188 Q 280 182, 280 175"
+            fill="#FF79A8"
+            opacity="0.8"
+          />
+        </g>
+
+        <!-- Cute flowers on bottom tier - enhanced -->
+        <g class="flower-decorations">
+          <!-- Flower 1 -->
+          <circle cx="100" cy="280" r="5" fill="#FF79A8" opacity="0.9" />
+          <circle cx="100" cy="280" r="3" fill="#FFDDE8" />
+          <circle cx="94" cy="276" r="2.5" fill="#FFA28A" opacity="0.8" />
+          <circle cx="106" cy="276" r="2.5" fill="#FFA28A" opacity="0.8" />
+          <circle cx="94" cy="284" r="2.5" fill="#FFA28A" opacity="0.8" />
+          <circle cx="106" cy="284" r="2.5" fill="#FFA28A" opacity="0.8" />
+
+          <!-- Flower 2 -->
+          <circle cx="200" cy="280" r="5" fill="#FFA28A" opacity="0.9" />
+          <circle cx="200" cy="280" r="3" fill="#FFDDE8" />
+          <circle cx="194" cy="276" r="2.5" fill="#FF79A8" opacity="0.8" />
+          <circle cx="206" cy="276" r="2.5" fill="#FF79A8" opacity="0.8" />
+          <circle cx="194" cy="284" r="2.5" fill="#FF79A8" opacity="0.8" />
+          <circle cx="206" cy="284" r="2.5" fill="#FF79A8" opacity="0.8" />
+
+          <!-- Flower 3 -->
+          <circle cx="300" cy="280" r="5" fill="#FF79A8" opacity="0.9" />
+          <circle cx="300" cy="280" r="3" fill="#FFDDE8" />
+          <circle cx="294" cy="276" r="2.5" fill="#FFA28A" opacity="0.8" />
+          <circle cx="306" cy="276" r="2.5" fill="#FFA28A" opacity="0.8" />
+          <circle cx="294" cy="284" r="2.5" fill="#FFA28A" opacity="0.8" />
+          <circle cx="306" cy="284" r="2.5" fill="#FFA28A" opacity="0.8" />
+        </g>
+
+        <!-- Cute stars on sides -->
+        <g class="star-decorations">
+          <path
+            d="M 70 200 L 72 205 L 77 205 L 73 208 L 75 213 L 70 210 L 65 213 L 67 208 L 63 205 L 68 205 Z"
+            fill="#FFA28A"
+            opacity="0.6"
+          />
+          <path
+            d="M 330 200 L 332 205 L 337 205 L 333 208 L 335 213 L 330 210 L 325 213 L 327 208 L 323 205 L 328 205 Z"
+            fill="#FF79A8"
+            opacity="0.6"
+          />
+          <path
+            d="M 50 160 L 52 165 L 57 165 L 53 168 L 55 173 L 50 170 L 45 173 L 47 168 L 43 165 L 48 165 Z"
+            fill="#FFDDE8"
+            opacity="0.7"
+          />
+          <path
+            d="M 350 160 L 352 165 L 357 165 L 353 168 L 355 173 L 350 170 L 345 173 L 347 168 L 343 165 L 348 165 Z"
+            fill="#FFA28A"
+            opacity="0.6"
+          />
+        </g>
+
+        <!-- Tiny pink sparkles around cake -->
+        <g class="sparkle-float">
+          <circle cx="80" cy="270" r="2" fill="#FF79A8" opacity="0.4" />
+          <circle cx="320" cy="270" r="2" fill="#FF79A8" opacity="0.4" />
+          <circle cx="100" cy="200" r="1.5" fill="#FFDDE8" opacity="0.5" />
+          <circle cx="300" cy="200" r="1.5" fill="#FFDDE8" opacity="0.5" />
+          <circle cx="130" cy="135" r="1.5" fill="#FF79A8" opacity="0.4" />
+          <circle cx="270" cy="135" r="1.5" fill="#FF79A8" opacity="0.4" />
+        </g>
+      </svg>
+
+      <!-- Name display on cake -->
+      <div class="cake-name" id="cakeName">Happy Birthday bb!</div>
+
+      <!-- Candles container -->
+      <div class="candles-container" id="candlesContainer">
+        <!-- Candles will be generated by JavaScript -->
+      </div>
+    </div>
+
+    <!-- Celebration message -->
+    <div class="celebration-message" id="celebrationMessage">
+      <div class="celebration-icon">
+        <i class="fas fa-birthday-cake"></i>
+      </div>
+      <h2>Happy Birthday!</h2>
+      <p>All candles blown out! Make a wish!</p>
+      <div class="celebration-icons">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-heart"></i>
+        <i class="fas fa-star"></i>
+      </div>
+    </div>
+
+    <!-- Confetti container -->
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <!-- Microphone button -->
+    <button class="mic-button" id="micButton" aria-label="Enable microphone">
+      <i class="fas fa-microphone" aria-hidden="true"></i>
+      <span>Enable Microphone</span>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
