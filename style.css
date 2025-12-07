@@ -189,7 +189,7 @@ body {
 /* Candles */
 .candles-container {
     position: absolute;
-    top: 30%;
+    top: 31%;
     left: 50%;
     transform: translateX(-50%);
     width: clamp(160px, 24vw, 200px);
@@ -214,7 +214,7 @@ body {
     transition: transform 0.2s ease;
     flex-shrink: 0;
     flex: 0 0 auto;
-    margin-bottom: 0;
+    margin-bottom: -1px;
 }
 
 .candle::after {
@@ -224,7 +224,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: clamp(2px, 0.3vw, 3px);
-    height: clamp(2px, 0.4vh, 4px);
+    height: clamp(1.5px, 0.3vh, 3px);
     background: #E0E0E0;
     border-radius: 1px;
 }
@@ -476,7 +476,7 @@ body {
     .candles-container {
         width: clamp(160px, 24vw, 200px);
         max-width: 200px;
-        top: 30%;
+        top: 31%;
         gap: clamp(8px, 1vw, 12px);
     }
 }
@@ -500,7 +500,7 @@ body {
     .candles-container {
         width: clamp(140px, 22vw, 170px);
         max-width: 170px;
-        top: 29%;
+        top: 30.5%;
         gap: clamp(6px, 0.8vw, 8px);
     }
     
@@ -538,7 +538,7 @@ body {
     .candles-container {
         width: clamp(120px, 20vw, 150px);
         max-width: 150px;
-        top: 28.5%;
+        top: 30%;
         gap: clamp(4px, 0.6vw, 6px);
     }
     
@@ -572,7 +572,7 @@ body {
     .candles-container {
         width: clamp(110px, 18vw, 140px);
         max-width: 140px;
-        top: 28%;
+        top: 29.5%;
         gap: clamp(3px, 0.5vw, 5px);
     }
     
